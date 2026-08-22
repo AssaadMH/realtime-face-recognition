@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 600" width="1320" height="600" role="img">
+  <style>
+    .f  { font-family: Arial, Helvetica, sans-serif; }
+    .m  { font-family: Consolas, "Courier New", monospace; }
+    .ttl{ font-size: 30px; font-weight: bold; fill: #14506b; letter-spacing: 1.2px; }
+    .hd { font-size: 26px; font-weight: bold; fill: #11161b; }
+    .bd { font-size: 23px; fill: #3f4a55; }
+    .sm { font-size: 21px; fill: #6a7580; }
+    .st { font-size: 21px; font-weight: bold; fill: #2c7c9e; letter-spacing: 1px; }
+  </style>
+  <rect width="1320" height="600" fill="#ffffff"/>
+
+  <text class="f ttl" x="40" y="52">FACIAL RECOGNITION — THREE STAGES, ONE DEFENSIBLE THRESHOLD</text>
+
+  <!-- ================= stage 1 ================= -->
+  <rect x="40" y="86" width="384" height="200" rx="12" fill="#ffffff" stroke="#2c7c9e" stroke-width="3"/>
+  <text class="f st" x="64" y="122">STAGE 1</text>
+  <text class="f hd" x="64" y="158">Capture &amp; label</text>
+  <text class="f sm" x="64" y="192">Build a face dataset from</text>
+  <text class="f sm" x="64" y="218">the camera, one folder per</text>
+  <text class="f sm" x="64" y="244">identity. New people can be</text>
+  <text class="f sm" x="64" y="270">enrolled without a restart.</text>
+
+  <path d="M436 186 h40" stroke="#2c7c9e" stroke-width="4" fill="none"/>
+  <path d="M476 186 l-14 -8 v16 z" fill="#2c7c9e"/>
+
+  <!-- ================= stage 2 ================= -->
+  <rect x="488" y="86" width="384" height="200" rx="12" fill="#ffffff" stroke="#2c7c9e" stroke-width="3"/>
+  <text class="f st" x="512" y="122">STAGE 2</text>
+  <text class="f hd" x="512" y="158">Train &amp; serialise</text>
+  <text class="f sm" x="512" y="192">LBPH recogniser trained</text>
+  <text class="f sm" x="512" y="218">locally; the model and its</text>
+  <text class="f sm" x="512" y="244">label map are written to</text>
+  <text class="f sm" x="512" y="270">disk for the runtime.</text>
+
+  <path d="M884 186 h40" stroke="#2c7c9e" stroke-width="4" fill="none"/>
+  <path d="M924 186 l-14 -8 v16 z" fill="#2c7c9e"/>
+
+  <!-- ================= stage 3 ================= -->
+  <rect x="936" y="86" width="344" height="200" rx="12" fill="#e2ecf1" stroke="#14506b" stroke-width="3"/>
+  <text class="f st" x="960" y="122" fill="#14506b">STAGE 3</text>
+  <text class="f hd" x="960" y="158" fill="#14506b">Live inference</text>
+  <text class="f sm" x="960" y="192">Webcam feed on a</text>
+  <text class="f sm" x="960" y="218">Raspberry Pi 4 target.</text>
+  <text class="f sm" x="960" y="244">Each face drawn with its</text>
+  <text class="f sm" x="960" y="270">identity and confidence.</text>
+
+  <!-- ================= ROC panel ================= -->
+  <rect x="40" y="316" width="600" height="246" rx="12" fill="#f0f4f6" stroke="#14506b" stroke-width="3"/>
+  <text class="f sm" x="62" y="346">ROC — HOW THE THRESHOLD WAS CHOSEN</text>
+
+  <!-- axes -->
+  <line x1="130" y1="530" x2="600" y2="530" stroke="#3f4a55" stroke-width="3"/>
+  <line x1="130" y1="530" x2="130" y2="366" stroke="#3f4a55" stroke-width="3"/>
+  <text class="f" x="365" y="556" text-anchor="middle" font-size="20" fill="#6a7580">false positive rate</text>
+  <text class="f" x="0" y="0" font-size="20" fill="#6a7580" transform="translate(108,448) rotate(-90)" text-anchor="middle">true positive rate</text>
+
+  <!-- chance line -->
+  <line x1="130" y1="530" x2="600" y2="366" stroke="#c4cdd4" stroke-width="3" stroke-dasharray="10 8"/>
+
+  <!-- roc curve -->
+  <path d="M130 530 C 160 424, 236 382, 600 372" fill="none" stroke="#14506b" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- operating point -->
+  <circle cx="206" cy="405" r="11" fill="#96271c"/>
+  <line x1="206" y1="405" x2="300" y2="452" stroke="#96271c" stroke-width="3"/>
+  <text class="f" x="310" y="452" font-size="21" font-weight="bold" fill="#96271c">operating point</text>
+  <text class="f" x="310" y="478" font-size="20" fill="#6a7580">= the confidence threshold</text>
+
+  <!-- ================= right note ================= -->
+  <rect x="670" y="316" width="610" height="246" rx="12" fill="#e3efe8" stroke="#285f42" stroke-width="3"/>
+  <text class="f" x="696" y="356" font-size="26" font-weight="bold" fill="#285f42">Known, or honestly unknown.</text>
+  <text class="f bd" x="696" y="396">Below the threshold the face is accepted as a known</text>
+  <text class="f bd" x="696" y="424">identity; above it, it is reported as unknown rather</text>
+  <text class="f bd" x="696" y="452">than forced onto the nearest match.</text>
+  <text class="f sm" x="696" y="496">The classifier was evaluated with a documented ROC</text>
+  <text class="f sm" x="696" y="522">analysis, not a single accuracy figure — which is what</text>
+  <text class="f sm" x="696" y="548">makes that threshold defensible instead of a guess.</text>
+</svg>
