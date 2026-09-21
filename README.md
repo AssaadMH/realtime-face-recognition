@@ -37,6 +37,10 @@ The training DATASET is deliberately excluded: it is photographs of real people 
 
 Not included in this repository: 2 belongs to another project file(s), 2 duplicate copy file(s), 3 excluded by name file(s) - build caches, generated toolpaths and oversized binaries are kept out on purpose. The source they are generated from is here.
 
+## Documents
+
+- [`docs/Reconnaissance_Faciale_RPi.pptx`](docs/Reconnaissance_Faciale_RPi.pptx): defence slides (FR), ENIG GEA 2, 2025-2026, supervised by M. Mohamed Naoui. They cover the architecture, the LBPH parameters (radius 1, 8 neighbours, 8x8 grid, confidence threshold 70) and the test conditions (3 subjects, 50 images each).
+
 ## Third-party work used here
 
 Everything in this repository is my own work. It builds on the following, which are **not** mine and are used under their own licences:
